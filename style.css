@@ -4,20 +4,25 @@
     box-sizing: border-box;
 }
 
+:root{
+    --base: #fff;
+}
 
 body{
-    border: 1px solid red;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: ease-in-out 0.3s;
+
+    background-color: var(--base);
 }
 
-.container{
-    border: 1px solid green;
-    
-}
 
+blockquote{
+    transition: ease-in-out 0.3s;
+    color: var(--base);
+}
 
 #quote-box{
     width: 600px;
@@ -26,6 +31,12 @@ body{
 .tweet_quote_icon{
     font-size: 25px;
     cursor: pointer;
+}
+
+#new-quote{
+    background-color: var(--base);
+    color: #fff;
+    font-weight: bold;
 }
 
 /*------------------------------------------*/
@@ -38,7 +49,17 @@ body{
     position: relative;
     width: 80px;
     height: 80px;
+    visibility: hidden;
 }
+
+.lds-roller.hiden{
+    display: none;
+}
+
+.lds-roller.loading{
+    visibility: visible;
+}
+
 .lds-roller div {
     animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     transform-origin: 40px 40px;
