@@ -37,7 +37,7 @@ const startLoader = ()=> {
 }
 
 const loading = ()=> {
-    console.log('loader component')
+    
     let loader = startLoader()
     blockquote.append(loader);
 
@@ -46,12 +46,7 @@ const loading = ()=> {
     updateBackgroundColor();
     let randonNumber = Math.floor(Math.random() * (2000 - 1000)) + 1000;
     
-    /* setTimeout(()=>{
-        
-        getNewQuote();
-        btnNewQuote.removeAttribute('disabled');
-
-    }, randonNumber); */
+    
 }
 
 
@@ -62,7 +57,7 @@ const updateBackgroundColor = () => {
     if(randonNumerUsed === undefined) {
         randonNumerUsed = randonIndex[0];
     } else{
-        console.log('nuevo numero')
+        
         randonNumerUsed = randonIndex.filter(n => n !== randonNumerUsed)[0];
     }
 
